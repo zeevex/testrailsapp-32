@@ -1,0 +1,29 @@
+<style type="text/css">
+table {
+
+   word-break: break-all;
+   word-wrap: break-word;
+}
+</style>
+<h1>Rails Running</h1>
+
+<div>
+  <h2>Platform</h2>
+<ul>
+  <li>Rails version: <%= Rails.version %></li>
+  <li>Ruby version: <%= RUBY_DESCRIPTION %></li>
+</ul>
+</div>
+
+<div>
+  <h2>Environment</h2>
+  <table width="100%">
+  <thead>
+    <tr><th>Key</th><th>Value</th></tr>
+  </thead>
+  <% ENV.sort.each do |key, value| %>
+    <tr><td width="30%"><%= key %></td><td><%= value %></td></tr>
+  <% end %>
+  </table>
+</div>
+
